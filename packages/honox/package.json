@@ -1,0 +1,22 @@
+{
+  "name": "@poc-rpc/honox",
+  "type": "module",
+  "scripts": {
+    "dev": "bunx --bun vite",
+    "build": "bunx --bun vite build --mode client && bunx --bun vite build",
+    "preview": "wrangler pages dev ./dist --port 8789",
+    "deploy": "$npm_execpath run build && wrangler pages deploy ./dist"
+  },
+  "private": true,
+  "dependencies": {
+    "hono": "^4.2.2",
+    "honox": "^0.1.9",
+    "@poc-rpc/prisma-d1": "workspace:*"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240403.0",
+    "@hono/vite-cloudflare-pages": "^0.2.4",
+    "vite": "^5.0.12",
+    "wrangler": "^3.47.0"
+  }
+}

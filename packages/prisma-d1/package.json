@@ -1,0 +1,26 @@
+{
+  "name": "@poc-rpc/prisma-d1",
+  "types": "./dist/index.d.ts",
+  "module": "./dist/index.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "dev": "wrangler dev",
+    "transpile": "tsc",
+    "migrate:d1:local": "zx ./scripts/migrate.mjs"
+  },
+  "dependencies": {
+    "@prisma/adapter-d1": "^5.12.1",
+    "@prisma/client": "^5.12.1"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240405.0",
+    "prisma": "^5.12.1",
+    "wrangler": "^3.48.0",
+    "zx": "^8.0.0"
+  }
+}

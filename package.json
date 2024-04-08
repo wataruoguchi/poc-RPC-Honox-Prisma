@@ -1,0 +1,16 @@
+{
+  "name": "poc-monorepo-cf",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "prettier": "prettier --write .",
+    "dev": "concurrently \"bun run dev:prisma-d1\" \"bun run dev:honox\"",
+    "dev:prisma-d1": "cd packages/prisma-d1 && bun run dev",
+    "dev:honox": "cd packages/honox && bun run build && bun run preview"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

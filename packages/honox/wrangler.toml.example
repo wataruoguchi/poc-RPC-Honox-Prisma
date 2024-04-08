@@ -1,0 +1,6 @@
+name = "honox-rpc"
+
+[[services]]
+binding = "USER_SERVICE"
+service = "prisma-d1"
+entrypoint = "UserService"
