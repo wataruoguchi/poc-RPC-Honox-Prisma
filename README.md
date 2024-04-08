@@ -42,3 +42,4 @@ It depends on a service defined in the `wrangler.toml`. `global.d.ts` is where y
 ## Difficulties
 
 - Running the honox project with bun via vite.
+- Use of `using` (Not implemented yet). [RPC specifies the Lifecycle](https://developers.cloudflare.com/workers/runtime-apis/rpc/lifecycle/)
